@@ -1,0 +1,23 @@
+//
+//  PrefixHeader.pch
+//  Calsee2qdsme
+//
+//  Created by SCHENK on 2020/8/21.
+//  Copyright © 2020 SCHENK. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import "HelpCommon.h"
+#import "MBProgressHUD+YF.h"
+#import "AFNetworkReachabilityManager.h"
+#define ScreenW [UIScreen mainScreen].bounds.size.width
+#define ScreenH [UIScreen mainScreen].bounds.size.height
+#define KIsiPhoneX \
+({BOOL KIsiPhoneX = NO;\
+if (@available(iOS 11.0, *)) {\
+KIsiPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bottom > 0.0;\
+}\
+(KIsiPhoneX);})
+
+#endif /* PrefixHeader_pch */
